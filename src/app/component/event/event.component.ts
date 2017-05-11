@@ -21,7 +21,7 @@ export class EventComponent implements OnInit {
   }
 
   navigateToDetailPage(event:any){
-    this.router.navigate(['/event-detail', event.eventId]);
+    this.router.navigate(['/event-detail/', event.eventId]);
   }
 
 }

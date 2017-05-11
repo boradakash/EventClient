@@ -9,12 +9,9 @@ import { EventComponent } from './component/event/event.component';
 import { EventDetailComponent } from './component/event-detail/event-detail.component';
 
 const appRoutes: Routes = [
+  { path: '', redirectTo: '/event', pathMatch: 'full' },
   { path: 'event', component: EventComponent },
-  { path: 'event-detail/:id',      component: EventDetailComponent },
-  { path: '',
-    redirectTo: '/event',
-    pathMatch: 'full'
-  }
+  { path: 'event-detail/:id',  component: EventDetailComponent },
 ];
 
 @NgModule({
@@ -29,6 +26,7 @@ const appRoutes: Routes = [
     HttpModule,
     RouterModule.forRoot(appRoutes)
   ],
+  exports:[RouterModule],
   providers: [],
   bootstrap: [AppComponent]
 })

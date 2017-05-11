@@ -12,7 +12,7 @@
   <tbody>
     <tr *ngFor="let eve of events">
       <td>{{eve.eventName}}</td>
-      <td>  <img class="img-responsive" [src]="eve.imageName"/></td>
+      <td>  <img class="img-responsive" height="100px" width="100px" src="http://localhost:65329/EventImages/{{eve.imageName}}"/></td>
       <td>{{eve.startDate | date:'longDate'}}</td>
       <td>{{eve.endDate | date:'longDate'}}</td>
       <td>{{eve.totalParticipant}}</td>
