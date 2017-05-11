@@ -1,0 +1,22 @@
+<table class="table">
+  <thead>
+    <tr>
+    <th>Event Name</th>
+    <th>Image</th>
+    <th>StartDate</th>
+    <th>EndDate</th>
+    <th>Total Registered Participant</th>
+    <th>Show Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let eve of events">
+      <td>{{eve.eventName}}</td>
+      <td>  <img class="img-responsive" [src]="eve.imageName"/></td>
+      <td>{{eve.startDate | date:'longDate'}}</td>
+      <td>{{eve.endDate | date:'longDate'}}</td>
+      <td>{{eve.totalParticipant}}</td>
+      <td><button type="button" class="btn btn-primary" (click)="navigateToDetailPage(eve)">Show Details</button></td>
+      </tr>
+  </tbody>
+</table>
